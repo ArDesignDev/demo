@@ -1,0 +1,118 @@
+.btn{
+
+  color: #fff;
+  background-color: transparent;
+  padding: 12px 14px;
+  font-size: 0.875rem;
+  border: 1px solid #fff;
+  letter-spacing: 0;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: all 0.4s;
+  font-family: 'Roboto', sans-serif;
+
+
+  &:hover{
+    border: 1px solid $mainColor;
+    color: $mainColor;
+  }
+
+  @mixin atSmall{
+    padding: 18px 36px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+  }
+
+  @mixin atXLarge{
+    font-size: 0.875rem;
+  }
+
+  &--wide{
+
+    padding: 13px 26px;
+    @mixin atSmall{
+      padding: 15px 36px;
+    }
+    @mixin atXLarge{
+      padding: 18px 65px;
+    }
+  }
+
+  &--red{
+    background-color: $mainColor;
+    border: 1px solid $mainColor;
+    margin-right: 5px;
+    font-weight: normal;
+
+    &:hover{
+      background-color: $mainHover;
+      border: 1px solid $mainHover;
+      color: #fff;
+    }
+
+    @mixin atXSmall{
+      margin-right: 15px;
+    }
+
+    @mixin atSmall{
+      font-weight: 500;
+    }
+  }
+
+  &--red-border{
+    border: 1px solid $mainColor;
+    color: $mainColor;
+    padding: 14px 36px;
+    font-size: 	0.875rem;
+
+    &:hover{
+      background-color: $mainColor;
+      border: 1px solid $mainColor;
+      color: #fff;
+    }
+  }
+
+  &--blue-border{
+    border: 1px solid #38afaf;
+    color: $secondColor;
+    padding: 14px 36px;
+    font-size: 	0.875rem;
+
+    &:hover{
+      background-color: $secondColor;
+      border: 1px solid $secondColor;
+      color: #fff;
+    }
+  }
+
+  &--small{
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    letter-spacing: 0;
+
+    @mixin atSmall{
+      padding: 14px 30px;
+      font-size: 0.875rem;
+    }
+  }
+
+  &--smaller{
+    font-size: 	0.8125rem;
+    padding: 15px 20px;
+  }
+
+  &--small-text{
+    text-transform: initial;
+    padding: 10px 27px;
+  }
+
+  &--projects-btn{
+    letter-spacing: 0;
+    padding: 10px 31px;
+    font-weight: 400;
+  }
+
+}

@@ -1,0 +1,76 @@
+/* lOAD EFFECT HOME TITLE */
+.load-effect{
+  transition: all 1s ease-in-out;
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.bottom-fade-in{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* lOAD EFFECT CONTENT */
+.load-effect2{
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  transform: translateY(40px);
+
+  &--fadein{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL EFFECT CONTENT FADE IN */
+.scroll-effect{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateY(20px);
+
+  &--is-showing{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-effect2{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateY(20px);
+
+  &--is-showing{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-effect3{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateY(20px);
+
+  &--is-showing{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-fadin{
+  opacity: 0;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(80px);
+  &--is-showing{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* SCROLL EFFECT CONTENT WIDTH */
+.animate-width{
+  width: 85px;
+}
+
+.animate-width2{
+  width: 60px;
+}

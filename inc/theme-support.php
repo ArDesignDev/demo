@@ -2,7 +2,7 @@
 
 /*
 @package sitename
-	
+
 	========================
      THEME SUPPORT FUNCTIONS
 	========================
@@ -15,7 +15,10 @@ function sitename_theme_setup(){
 	add_theme_support('menus');
 
 	register_nav_menu('primary', 'Primary Menu');
-	register_nav_menu('secondary', 'Footer Menu');
+	register_nav_menu('secondary', 'Secondary Menu');
+	register_nav_menu('footer_one', 'First Footer Menu');
+	register_nav_menu('footer_two', 'Second Footer Menu');
+	register_nav_menu('projects_cat', 'Project Category Menu');
 }
 
 add_action('init', 'sitename_theme_setup');
@@ -96,7 +99,7 @@ add_filter('excerpt_length', 'sitename_excerpt_length' );
  		'before_title' => '<h2 class="widget-title">',
  		'after_title' => '</h2>',
  		));
-    
+
     register_sidebar( array(
  		'name' => 'Single-side',
  		'id' => 'single-side',
@@ -108,3 +111,42 @@ add_filter('excerpt_length', 'sitename_excerpt_length' );
  }
 
 add_action('widgets_init', 'ourWidgetsInit');
+
+// CUSTOM POST TYPE ACTIVE
+
+add_action('nav_menu_css_class', 'add_current_nav_class', 10, 2 );
+
+	function add_current_nav_class($classes, $item) {
+
+		// Getting the current post details
+		global $post;
+
+		// Getting the post type of the current post
+		$current_post_type = get_post_type_object(get_post_type($post->ID));
+		$current_post_type_slug = $current_post_type->rewrite['slug'];
+
+		// Getting the URL of the menu item
+		$menu_slug = strtolower(trim($item->url));
+
+		// If the menu item URL contains the current post types slug add the current-menu-item class
+		if (strpos($menu_slug,$current_post_type_slug) !== false) {
+
+		   $classes[] = 'current-menu-item';
+
+		}
+
+		// Return the corrected set of classes to be added to the menu item
+		return $classes;
+
+	}
+
+// SEARCH ONLY POST
+function SearchFilter($query)
+{
+    if (($query->is_search)&&(!is_admin())) {
+        $query->set('post_type', 'post');
+    }
+    return $query;
+}
+
+add_filter('pre_get_posts','SearchFilter');

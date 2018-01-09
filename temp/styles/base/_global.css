@@ -1,0 +1,96 @@
+html{
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: $mainLink;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+  color: #000;
+}
+
+ul{
+	padding-left: 0;
+}
+
+.open{
+	display: block !important;
+}
+
+.display-on-mobile{
+  display: block;
+
+  @mixin atMedium{
+    display: none !important;
+  }
+}
+
+.main-color{
+  color: $mainColor;
+}
+
+.gray-background{
+  background-color: #f7f7f7 !important;
+}
+
+.display-text-on-deskop{
+  display: none;
+
+  @mixin atMedium{
+    display: inline;
+  }
+}
+
+.display-on-deskop{
+  display: none;
+
+  @mixin atMedium{
+    display: block;
+  }
+}
+
+.display-text-on-mobile{
+  display: inline;
+
+  @mixin atMedium{
+    display: none !important;
+  }
+}
+
+
+.section{
+  outline: none;
+}
+
+.margin-fix-m{
+  margin-left: -10px;
+  margin-right: -10px;
+  @mixin atSmall{
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 530px){
+  .equal-heights{
+    height: auto !important;
+  }
+}

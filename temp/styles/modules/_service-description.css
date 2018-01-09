@@ -1,0 +1,69 @@
+.service-description{
+  width: 100%;
+  background-color: #34495e;
+  padding-top: 100px;
+  position: relative;
+  z-index: 9;
+  margin-top: -10px;
+  padding: 100px 15px 0;
+
+  @mixin atMedium{
+    padding: 100px 15px 40px;
+  }
+
+  @mixin atLarge{
+    padding: 140px 15px 40px;
+  }
+  @mixin atXLarge{
+    padding: 180px 15px 40px;
+  }
+
+  .wrapper{
+    padding-bottom: 32px;
+    @mixin atSmall{
+      padding-bottom: 0;
+    }
+  }
+
+
+  &__content{
+    @mixin atMedium{
+      min-height: 540px;
+    }
+  }
+
+  &__title{
+    text-align: left;
+    color: #fff;
+  }
+
+  &__subtitle{
+    color: #fff;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+
+  &__text{
+    color: #fff;
+    font-size: 0.875rem;
+    @mixin atSmall{
+      font-size: 1rem;
+    }
+  }
+
+  &__separator{
+    margin: 27px 0 25px;
+    background-color: #fff;
+    width: 0px;
+  }
+
+  &__image{
+    margin-top: 45px;
+    text-align: right;
+    position: relative;
+    z-index: 11;
+    @mixin atMedium{
+      margin-top: -50px;
+    }
+  }
+}

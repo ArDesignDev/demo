@@ -1,0 +1,16 @@
+.back-to-top{
+
+  display: none;
+	position: fixed;
+	z-index: 999;
+	bottom: 0;
+	right: 0;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	border: none;
+  background-color: #404040;
+  color: #fff;
+  padding: 7px 14px;
+  border-radius: 2px;
+  cursor: pointer;
+}

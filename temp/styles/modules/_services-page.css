@@ -1,0 +1,85 @@
+.services-page{
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #fff;
+
+  @mixin atSmall{
+    padding-top: 0;
+  }
+
+  .wrapper{
+    position: relative;
+    z-index: 10;
+    margin-top: -15px;
+    @mixin atSmall{
+      margin-top: 20px;
+    }
+    @mixin atMedium{
+      margin-top: 0;
+    }
+  }
+
+  &__post{
+    width: 100%;
+    transition: all 0.4s;
+    border: 1px solid transparent;
+    padding: 30px 15px 5px 0;
+
+  @mixin atSmall{
+    padding: 30px 15px 10px 0;
+  }
+
+   @mixin atMedium{
+      margin-bottom: 20px;
+    }
+
+    /*&:hover .btn--red{
+      background-color: $mainHover;
+      border: 1px solid $mainHover;
+    }*/
+
+    &:hover .services-page__image{
+      opacity: 0.6;
+    }
+
+  }
+
+  &__image{
+    padding: 0 10px 0 0;
+    transition: all 0.4s;
+    @mixin atMedium{
+      padding: 0;
+    }
+    @mixin atMedium{
+      padding: 0 25px 10px;
+    }
+
+  }
+
+  &__content{
+
+    &__title{
+      margin: 0;
+      color: #222;
+      font-size: 1rem;
+      text-transform: uppercase;
+      @mixin atMedium{
+        font-size: 1.25rem;
+      }
+    }
+
+    &__text{
+      font-size: 0.875rem;
+      color: #222;
+      margin-bottom: 20px;
+      @mixin atMedium{
+        font-size: 0.9375rem;
+      }
+    }
+
+
+}
+
+
+
+}

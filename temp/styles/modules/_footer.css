@@ -1,0 +1,124 @@
+.main-footer{
+
+	padding: 40px 10px 0;
+	position: relative;
+	background-color: $mainBlack;
+
+	@mixin atMedium{
+		padding: 60px 0 0 0;
+	}
+
+	&__footer-widget-area{
+		padding-bottom: 10px;
+	}
+
+	.widget-title{
+		color: #fff;
+		font-size: 1.125rem;
+		text-transform: uppercase;
+		margin-bottom: 30px;
+	}
+
+	&__info{
+		padding-bottom: 70px;
+	}
+
+	p{
+		line-height: 140%;
+		font-size: 1rem;
+		font-family: 'Roboto', sans-serif;
+		color: $grayFooterText;
+	}
+
+	li{
+		list-style: none;
+
+		a{
+
+			font-size: 1rem;
+			line-height: 140%;
+			color: $grayFooterText;
+
+			 &:hover{
+				 color: $mainColor;
+				 transition: all 0.3s;
+			 }
+		}
+	}
+
+	&__subscribe-form{
+		input[type="email"]{
+			width: 70%;
+			margin-right: 7px;
+			padding: 10px;
+			border: none;
+			height: 33px;
+			font-size: 0.75rem;
+			background-color: #333333;
+			border-radius: 2px;
+			color: $grayFooterText;
+		}
+
+    &__letter{
+			position: relative;
+
+			input[type="submit"]{
+				color: transparent;
+				padding: 10px 7px;
+				background-color: $secondColor;
+				border: none;
+				height: 32px;
+				border-radius: 2px;
+				cursor: pointer;
+				font-size: 0.75rem;
+
+				&:hover{
+					background-color: #279696;
+				}
+			}
+			&::after{
+				font-family: 'FontAwesome';
+				content: '\f1d8';
+				position: absolute;
+				top: 3px;
+				margin-left: -30px;
+				color: #fff;
+				font-size: 0.875rem;
+			}
+		}
+
+	}
+
+	&__line{
+		border-top: 1px solid rgba(221, 221, 221, 0.1);
+		width: 100%;
+	}
+
+	&__copyrights{
+
+		p{
+			font-size: 0.875rem;
+		}
+
+		&__link{
+			color: #a0a0a0
+		}
+
+		&__right{
+			text-align: right;
+		}
+	}
+
+	/* form fixes */
+	.wpcf7-not-valid-tip,
+	.screen-reader-response{
+		display: none;
+	}
+
+	.wpcf7-response-output{
+		margin-top: 11px;
+    font-size: 12px;
+    color: #4e4e4e;
+		font-family: 'Roboto', sans-serif;
+	}
+}

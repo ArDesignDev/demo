@@ -1,0 +1,38 @@
+.projects-page{
+
+    padding-top: 20px;
+    @mixin atMedium{
+      padding-top: 0;
+    }
+
+  .wrapper{
+    @mixin atMedium{
+      margin-top: 26px;
+    }
+  }
+
+  .last-projects-section__nav{
+    margin-top: -15px;
+    li{
+      font-size: 0.75rem;
+      @mixin atSmall{
+        font-size: 0.8125rem;
+      }
+      @mixin atMedium{
+        font-size: 0.875rem;
+      }
+    }
+  }
+
+  .last-projects-section__container{
+    padding-top: 10px;
+    @mixin atSmall{
+      padding-top: 28px;
+    }
+    @mixin atMedium{
+      padding-top: 50px;
+    }
+  }
+
+
+}
